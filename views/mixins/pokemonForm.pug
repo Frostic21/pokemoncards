@@ -1,0 +1,78 @@
+mixin pokemonForm(pokemon, actionURL, mode, title)
+
+    div.form-panel
+        div.header= title
+            form(action=actionURL method='post')
+                div.form-input
+                    label(for='name') Name:
+                    input(type='text' id='name' name='name' value=pokemon.name)
+                div.form-input
+                    label(for='element') Element
+                    select(id='element' name='element' autocomplete='off')
+                        each element in elements
+                            option(value=element selected = (element ===pokemon.element)) #{element}
+                div.form-input
+                    label(for='move1') Move 1:
+                        textarea( id='move1' name='move1') #{pokemon.move1}
+                div.form-input
+                    label(for='move2') Move 2:
+                        textarea( id='move2' name='move2') #{pokemon.move2}
+                div.form-input
+                    label(for='image') Image URL:
+                    input(type='text' id='image' name='image' value=pokemon.image)
+                div.form-input
+                    label(for='hp') Hp:
+                        textarea( id='hp' name='hp') #{pokemon.hp}
+                div.form-input
+                    label(for='res1') Weakness
+                        select(id='res1' name='res1' autocomplete='off')
+                            each element in elements
+                                option(value=res1 selected = (element === pokemon.res1)) #{element}
+                div.form-input
+                    label(for='res2') Resistance
+                        select(id='res2' name='res2' autocomplete='off')
+                            each element in elements
+                                option(value=res2 selected = (element === pokemon.res2)) #{element}
+                div.form-input
+                    label(for='res3') Retreat Cost
+                        select(id='res3' name='res3' autocomplete='off')
+                            each element in elements
+                                option(value=res3 selected = (element === pokemon.res3)) #{element}
+                div.form-input
+                    label(for='color1') Color 1:
+                    input(type='text' id='color1' name='color1' value=pokemon.color1)
+                div.button-row
+                    a.button.cancel(href='/') Cancel
+                    if (mode==='edit')
+                        a.button.delete(href=`/delete/${pokemon.id}`) Delete
+                    button.button.save(type='submit') Submit
+                br
+                | Links:
+                br
+                | 1. Nothing
+                br
+                | 2. Power
+                br
+                | 3. Electric
+                br
+                | 4. Ghost
+                br
+                | 5. Psychic
+                br
+                | 6. Fire
+                br
+                | 7. Water
+                br
+                | 8. Ground
+                br
+                | 9. Grass
+                br
+                | 10. Fairy
+                br
+                | 11. Dark
+                br
+                | 12. Ice
+                br
+                | 13. Dragon
+                br
+                |14. Normal

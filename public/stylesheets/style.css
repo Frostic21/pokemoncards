@@ -1,0 +1,78 @@
+body {
+  padding: 0;
+  margin: 0;
+  background: #f3f4f6;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.container {
+  padding: 48px;
+  display: flex;
+}
+
+.card{
+  background: white;
+  border-radius: 16px;
+  width: 350px;
+  height: 500px;
+  justify-content: space-evenly;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px;
+}
+
+a {
+  color: #00B7FF;
+}
+.row{
+  display: flex;
+  justify-content: space-evenly;
+}
+.row2{
+   padding: 40px 16px 0 16px;
+   display: flex;
+   justify-content: space-evenly;
+ }
+.column{
+  float: left;
+  width: 100%;
+}
+.center{
+  justify-content: center;
+  align-items: center;
+}
+.res1, .res2, .res3, .card-type, .cost1, .cost2, .cost3, .cost4 {
+  width: 30px;
+  height: 30px;
+}
+.cost1, .cost2, .cost3, .cost4 {
+  padding-top: 10px;
+}
+.card-info2{
+  display: flex;
+  justify-content: space-evenly;
+}
+.card-type{
+  padding-top: 7px;
+}
+.card-title{
+  padding-right: 90px;
+}
+.card-hp{
+  padding-left: 90px;
+}
+img{
+  width: 264px;
+  height: 194px
+}
+.edit{
+  padding-top: 8px;
+}
+.row3{
+  display: flex;
+  padding: 0px 30px 0px 30px;
+}
+.row4{
+  display: flex;
+  padding-left:30px;
+}

@@ -1,0 +1,40 @@
+mixin pokemonCard(pokemon)
+
+    div.card(style=`background-color: ${pokemon.color1}; border: 6px solid #ffda08`)
+        div.card-header
+            div.row
+                p.card-title=pokemon.name
+                p.card-hp=`${pokemon.hp}`
+                img.card-type(src=pokemon.element)
+        img.card-image(src=pokemon.image style=`border: 3px solid #d1d5db;`)
+        div.card-body
+            div.card-details
+                div.column
+                    div.row3
+                        div.costs
+                            -for (let i = 0; i < pokemon.rating1; i++)
+                                                        img.cost1(src=pokemon.attelement1)
+                            -for (let i = 0; i < pokemon.rating2; i++)
+                                                        img.cost2(src=pokemon.attelement2)
+                        div.row4
+                            p.move1=pokemon.move1
+                            p.movedamage1= pokemon.damage1
+                    div.row3
+                        div.costs
+                            -for (let i = 0; i < pokemon.rating3; i++)
+                                                       img.cost1(src=pokemon.attelement3)
+                            -for (let i = 0; i < pokemon.rating4; i++)
+                                                       img.cost2(src=pokemon.attelement4)
+                        div.row4
+                            p.move2=pokemon.move2
+                            p.movedamage2= pokemon.damage2
+                div.row2
+                    p Weakness
+                    p Resistance
+                    p Retreat Cost
+                div.card-info2
+                    img.res1(src=pokemon.res1)
+                    img.res2(src=pokemon.res2)
+                    img.res3(src=pokemon.res3)
+            div.edit
+                a(href=`/edit/${pokemon.id}`) Edit
