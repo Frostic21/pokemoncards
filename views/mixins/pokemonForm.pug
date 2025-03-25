@@ -15,8 +15,34 @@ mixin pokemonForm(pokemon, actionURL, mode, title)
                     label(for='move1') Move 1:
                         textarea( id='move1' name='move1') #{pokemon.move1}
                 div.form-input
+                    label(for='damage1') Damage 1:
+                        textarea( id='damage1' name='damage1') #{pokemon.damage1}
+                div.form-input
+                    label(for='attelement1') Attack Element 1
+                        select(id='attelement1' name='attelement1' autocomplete='off')
+                            each element in elements
+                                option(value=attelement1 selected = (element === pokemon.attelement1)) #{element}
+                div.form-input
+                    label(for='attelement2') Attack Element 2
+                        select(id='attelement2' name='attelement2' autocomplete='off')
+                            each element in elements
+                                option(value=attelement2 selected = (element === pokemon.attelement2)) #{element}
+                div.form-input
                     label(for='move2') Move 2:
                         textarea( id='move2' name='move2') #{pokemon.move2}
+                div.form-input
+                    label(for='damage2') Damage 2:
+                        textarea( id='damage2' name='damage2') #{pokemon.damage2}
+                    div.form-input
+                        label(for='attelement3') Attack Element 3
+                            select(id='attelement3' name='attelement3' autocomplete='off')
+                                each element in elements
+                                    option(value=attelement3 selected = (element === pokemon.attelement3)) #{element}
+                    div.form-input
+                        label(for='attelement4') Attack Element 4
+                            select(id='attelement4' name='attelement4' autocomplete='off')
+                                each element in elements
+                                    option(value=attelement4 selected = (element === pokemon.attelement4)) #{element}
                 div.form-input
                     label(for='image') Image URL:
                     input(type='text' id='image' name='image' value=pokemon.image)

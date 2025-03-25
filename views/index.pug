@@ -6,7 +6,7 @@ block content
     form(action='/' method='get')
       div.form-input
         label(for='element') Element
-        select(id='element' name='element' autocomplete='off')
+        select.filter(id='element' name='element' autocomplete='off')
           each element in elements
             option(value=element selected= (element === searchElement)) #{element}
         div.form-input

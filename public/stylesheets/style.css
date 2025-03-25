@@ -76,3 +76,9 @@ img{
   display: flex;
   padding-left:30px;
 }
+.filter{
+  width: 100px;
+}
+.move1, .move2{
+  padding-left: 5px;
+}
